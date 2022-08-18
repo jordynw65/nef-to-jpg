@@ -8,8 +8,8 @@ def main():
     print("Starting Now")
     start = time.time()
     # Sometimes the file ending can be .nef or .NEF, therefore I included both possibilities to save extra work.
-    pathnef = "/Users/jordyn/Desktop/Jordyn/photoconverter/Single Image/*.nef"
-    pathNEF = "/Users/jordyn/Desktop/Jordyn/photoconverter/Single Image/*.NEF"
+    pathnef = "/folderpath/*.nef"
+    pathNEF = "/folderpath/*.NEF"
     for path in glob.glob(pathnef):
         with rawpy.imread(path) as raw:
             rgb = raw.postprocess()
