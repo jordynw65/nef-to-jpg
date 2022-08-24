@@ -5,8 +5,10 @@ import time
 
 
 def main():
-    print("Starting Now")
-    start = time.time()
+    # Timer is optional
+    # print("Starting Now")
+    # start = time.time()
+    
     # Sometimes the file ending can be .nef or .NEF, therefore I included both possibilities to save extra work.
     pathnef = "/folderpath/*.nef"
     pathNEF = "/folderpath/*.NEF"
@@ -19,9 +21,10 @@ def main():
         with rawpy.imread(path) as raw:
             rgb = raw.postprocess()
             imageio.imwrite(path + '.jpg', rgb)
-
-    end = time.time()
-    print("Elapsed Time:", round(end - start, 2), "seconds")
+    
+    # Timer is optional
+    # end = time.time()
+    # print("Elapsed Time:", round(end - start, 2), "seconds")
 
 
 if __name__ == '__main__':
