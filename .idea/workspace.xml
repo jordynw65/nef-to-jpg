@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1610ad70-d0ba-4ad7-9b07-05992549fd9e" name="Changes" comment="count images as they process and remove nef from file name. main.py and readme updated">
+    <list default="true" id="1610ad70-d0ba-4ad7-9b07-05992549fd9e" name="Changes" comment="readme updated">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668488128992</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="readme updated">
+      <created>1668488390467</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668488390467</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -97,7 +104,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Removal of nef or NEF within new file name." />
     <MESSAGE value="count images as they process and remove nef from file name. main.py and readme updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="count images as they process and remove nef from file name. main.py and readme updated" />
+    <MESSAGE value="readme updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
