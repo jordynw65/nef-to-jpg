@@ -12,16 +12,23 @@ def main():
     # Sometimes the file ending can be .nef or .NEF, therefore I included both possibilities to save extra work.
     pathnef = "/path/to/*.nef"
     pathNEF = "/path/to/*.NEF"
+    count = 0
     for path in glob.glob(pathnef):
         with rawpy.imread(path) as raw:
             rgb = raw.postprocess()
 
             imageio.imwrite(path.replace('.nef', '') + '.jpg', rgb)
+            count = count + 1
+            print('image #', count, ' done')
 
     for path in glob.glob(pathNEF):
+        count = +1
+
         with rawpy.imread(path) as raw:
             rgb = raw.postprocess()
             imageio.imwrite(path.replace('.NEF', '') + '.jpg', rgb)
+            count = count + 1
+            print('image #', count, ' done')
 
     # Timer is optional
     end = time.time()
