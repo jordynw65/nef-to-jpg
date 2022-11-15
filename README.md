@@ -12,6 +12,6 @@ I added in the amount of time that the program takes to complete. Here is a char
 </p>
 
 
-In the event that the program is interrupted, don't worry. While you'll have to run it from the beginning again, it will simply overwrite the ones it had already done. It won't make any duplicates. 
+In the event that the program is interrupted, don't worry. While you'll have to run it from the beginning again, it will simply overwrite the ones it had already done. It won't make any duplicates. The .nef or .NEF extension string will also be removed from the new image file name. Your original files will remain and will not delete or change quality. 
 
 I will try to include a few sample images that I find online in here as well :) 
