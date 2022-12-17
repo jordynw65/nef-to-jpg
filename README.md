@@ -1,6 +1,13 @@
 # nef-to-jpg
 This python script converts an entire directory containing nef images to jpg. 
 
+To install the requirements using pip:
+```shell
+cd photoconverter
+pip install -r requirements.txt
+```
+
+
 Be sure to change '/path/to' to the absolute path of the folder where the images are located.  
 
 ## Time
