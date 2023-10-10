@@ -1,41 +1,30 @@
 import glob
 import rawpy
 import imageio
-import time
 
 
 def main():
-    # Timer is optional
-    print("Starting Now")
-    start = time.time()
-
-    # Sometimes the file ending can be .nef or .NEF, therefore I included both possibilities to save extra work.
-    pathnef = "/path/to/*.nef"
-    pathNEF = "/path/to/*.NEF"
+    # sometimes the file ending can be .nef or .NEF, therefore I included both possibilities to save extra work.
+    directory = "/path/to/image/directory"
+    pathnef = glob.glob(f"{directory}/*.nef")
+    pathNEF = glob.glob(f"{directory}/*.NEF")
     count = 0
-    for path in glob.glob(pathnef):
+
+    # check the total number of images to begin with
+    number_files = len(pathnef) + len(pathNEF)
+    print("Total Number of Images: ", number_files)
+    for path in pathnef:
         with rawpy.imread(path) as raw:
             rgb = raw.postprocess()
-
             imageio.imwrite(path.replace('.nef', '') + '.jpg', rgb)
             count = count + 1
-            print('image #', count, ' done')
-
-    for path in glob.glob(pathNEF):
-        count = +1
-
+        print(count, '/', number_files)
+    for path in pathNEF:
         with rawpy.imread(path) as raw:
             rgb = raw.postprocess()
             imageio.imwrite(path.replace('.NEF', '') + '.jpg', rgb)
             count = count + 1
-            print('image #', count, ' done')
-
-    # Timer is optional
-    end = time.time()
-    minutes = (end - start) / 60
-    seconds = (end - start) % 60
-
-    print("Elapsed Time:", round(minutes), "minutes and ", round(seconds), "seconds")
+        print(count, '/', number_files)
 
 
 if __name__ == '__main__':
