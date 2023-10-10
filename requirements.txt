@@ -1,2 +1,2 @@
-imageio==2.20.0
-rawpy==0.17.1
+imageio>=2.20.0
+rawpy>=0.17.1
